@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hFirst"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/hScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:background="@color/white" >
+
+        <ImageButton
+            android:id="@+id/hBackBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="@dimen/imageBtnWH"
+            android:layout_height="@dimen/imageBtnWH"
+            android:src="@drawable/back"
+            android:layout_marginLeft="@dimen/backBtnM" />
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="단말기 상태 확인"
+            android:textSize="@dimen/dBarF"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_bold"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/hScroll"
+        app:layout_constraintTop_toBottomOf="@id/hFirst"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/mBigP" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lH"
+                android:background="@drawable/content_background"
+                android:elevation="1dp"
+                android:layout_margin="@dimen/mM"
+                android:layout_marginBottom="0dp" >
+
+                <ImageView
+                    android:id="@+id/hImage1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="@dimen/lImageWH"
+                    android:layout_height="@dimen/lImageWH"
+                    android:layout_marginLeft="@dimen/lMRL"
+                    android:src="@drawable/hardware1"/>
+
+                <TextView
+                    android:id="@+id/hName1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/hImage1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/lMRL"
+                    android:textSize="@dimen/lStateF"
+                    android:text="주 단말기" />
+
+                <TextView
+                    android:id="@+id/hState1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/lMRL"
+                    android:textSize="@dimen/lTimeF" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lH"
+                android:background="@drawable/content_background"
+                android:elevation="1dp"
+                android:layout_margin="@dimen/mM" >
+
+                <ImageView
+                    android:id="@+id/hImage2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="@dimen/lImageWH"
+                    android:layout_height="@dimen/lImageWH"
+                    android:layout_marginLeft="@dimen/lMRL"
+                    android:src="@drawable/hardware2" />
+
+                <TextView
+                    android:id="@+id/hName2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/hImage2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/lMRL"
+                    android:textSize="@dimen/lStateF"
+                    android:text="보조 단말기" />
+
+                <TextView
+                    android:id="@+id/hState2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/lMRL"
+                    android:textSize="@dimen/lTimeF" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lH"
+                android:background="@drawable/content_background"
+                android:elevation="1dp"
+                android:layout_margin="@dimen/mM"
+                android:layout_marginBottom="0dp" >
+
+                <ImageView
+                    android:id="@+id/hImage3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="@dimen/lImageWH"
+                    android:layout_height="@dimen/lImageWH"
+                    android:layout_marginLeft="@dimen/lMRL"
+                    android:src="@drawable/hardware2"/>
+
+                <TextView
+                    android:id="@+id/hName3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/hImage3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/lMRL"
+                    android:textSize="@dimen/lStateF"
+                    android:text="보조 단말기(개폐)" />
+
+                <TextView
+                    android:id="@+id/hState3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/lMRL"
+                    android:textSize="@dimen/lTimeF" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

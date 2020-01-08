@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sUp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/sDown"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/sign_background"
+        app:layout_constraintVertical_weight="0.9" >
+
+        <Button
+            android:id="@+id/sSigninBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="@id/sSignupBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN IN"
+            android:textColor="@color/whiteOpacity"
+            style="@style/SignBtnStyle"
+            app:layout_constraintVertical_bias="@dimen/iSignBtnB" />
+
+        <Button
+            android:id="@+id/sSignupBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/sSigninBtn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            style="@style/SignBtnStyle"
+            app:layout_constraintVertical_bias="@dimen/iSignBtnB" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sContent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ContentStyle"
+        app:layout_constraintVertical_bias="@dimen/iContentB" >
+
+        <EditText
+            android:id="@+id/sName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/sWarnName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:imeOptions="actionNext" />
+
+        <ImageButton
+            android:id="@+id/sNameDel"
+            app:layout_constraintTop_toTopOf="@id/sName"
+            app:layout_constraintRight_toRightOf="@id/sName"
+            app:layout_constraintBottom_toBottomOf="@id/sName"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:src="@drawable/delete"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/sWarnName"
+            app:layout_constraintTop_toBottomOf="@id/sName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/sId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="＊ Enter the Name"
+            style="@style/WarnTextStyle" />
+
+        <EditText
+            android:id="@+id/sId"
+            app:layout_constraintTop_toBottomOf="@+id/sWarnName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/sWarnId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID"
+            android:imeOptions="actionNext" />
+
+        <ImageButton
+            android:id="@+id/sIdDel"
+            app:layout_constraintTop_toTopOf="@id/sId"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/sId"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:src="@drawable/delete"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/sWarnId"
+            app:layout_constraintTop_toBottomOf="@id/sId"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/sPwd1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="＊ Enter the ID"
+            style="@style/WarnTextStyle" />
+
+        <TextView
+            android:id="@+id/sOverlapId"
+            app:layout_constraintTop_toBottomOf="@id/sId"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/sPwd1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="＊ Cannot Use This ID"
+             style="@style/WarnTextStyle" />
+
+        <EditText
+            android:id="@+id/sPwd1"
+            app:layout_constraintTop_toBottomOf="@id/sWarnId"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/sWarnPwd1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:imeOptions="actionNext" />
+
+        <ImageButton
+            android:id="@+id/sPwd1Del"
+            app:layout_constraintTop_toTopOf="@+id/sPwd1"
+            app:layout_constraintRight_toLeftOf="@id/sPwd1See"
+            app:layout_constraintBottom_toBottomOf="@id/sPwd1"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:layout_marginRight="@dimen/deleteBtnMR"
+            android:src="@drawable/delete"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/sPwd1See"
+            app:layout_constraintTop_toTopOf="@id/sPwd1"
+            app:layout_constraintRight_toRightOf="@id/sPwd1"
+            app:layout_constraintBottom_toBottomOf="@id/sPwd1"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:src="@drawable/eye_close" />
+
+        <TextView
+            android:id="@+id/sWarnPwd1"
+            app:layout_constraintTop_toBottomOf="@id/sPwd1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/sPwd2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="＊ Enter the Password"
+            style="@style/WarnTextStyle" />
+
+        <EditText
+            android:id="@+id/sPwd2"
+            app:layout_constraintTop_toBottomOf="@id/sWarnPwd1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/sWarnPwd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:imeOptions="actionNext" />
+
+        <ImageButton
+            android:id="@+id/sPwd2Del"
+            app:layout_constraintTop_toTopOf="@+id/sPwd2"
+            app:layout_constraintRight_toLeftOf="@id/sPwd2See"
+            app:layout_constraintBottom_toBottomOf="@id/sPwd2"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:layout_marginRight="@dimen/deleteBtnMR"
+            android:src="@drawable/delete"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/sPwd2See"
+            app:layout_constraintTop_toTopOf="@id/sPwd2"
+            app:layout_constraintRight_toRightOf="@id/sPwd2"
+            app:layout_constraintBottom_toBottomOf="@id/sPwd2"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:src="@drawable/eye_close" />
+
+        <TextView
+            android:id="@+id/sWarnPwd2"
+            app:layout_constraintTop_toBottomOf="@id/sPwd2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/sStunum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="＊ Enter the Confirm Password"
+            style="@style/WarnTextStyle" />
+
+        <EditText
+            android:id="@+id/sStunum"
+            app:layout_constraintTop_toBottomOf="@id/sWarnPwd2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/sWarnStunum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student Number"
+            android:maxLength="4"
+            android:inputType="number"
+            android:imeOptions="actionNext" />
+
+        <ImageButton
+            android:id="@+id/sStunumDel"
+            app:layout_constraintTop_toTopOf="@id/sStunum"
+            app:layout_constraintRight_toRightOf="@id/sStunum"
+            app:layout_constraintBottom_toBottomOf="@id/sStunum"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:src="@drawable/delete"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/sWarnStunum"
+            app:layout_constraintTop_toBottomOf="@id/sStunum"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/sRoomnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="＊ Enter the Student Number"
+            style="@style/WarnTextStyle" />
+
+        <EditText
+            android:id="@+id/sRoomnum"
+            app:layout_constraintTop_toBottomOf="@id/sWarnStunum"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/sWarnRoomnum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Room Number"
+            android:maxLength="3"
+            android:inputType="number"
+            android:imeOptions="actionDone"/>
+
+        <ImageButton
+            android:id="@+id/sRoomnumDel"
+            app:layout_constraintTop_toTopOf="@id/sRoomnum"
+            app:layout_constraintRight_toRightOf="@id/sRoomnum"
+            app:layout_constraintBottom_toBottomOf="@id/sRoomnum"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:src="@drawable/delete"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/sWarnRoomnum"
+            app:layout_constraintTop_toBottomOf="@id/sRoomnum"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="＊ Enter the Room Number"
+            style="@style/WarnTextStyle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sDown"
+        app:layout_constraintTop_toBottomOf="@id/sUp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"/>
+
+    <Button
+        android:id="@+id/sContinueBtn"
+        app:layout_constraintTop_toBottomOf="@+id/sUp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btnH"
+        android:text="CONTINUE"
+        style="@style/ContinueBtnStyle"
+        app:layout_constraintVertical_bias="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

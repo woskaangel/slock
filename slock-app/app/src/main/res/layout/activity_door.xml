@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/doorActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dFirst"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/dSecond"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1">
+
+        <ImageButton
+            android:id="@+id/dbackBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="@dimen/imageBtnWH"
+            android:layout_height="@dimen/imageBtnWH"
+            android:src="@drawable/back"
+            android:layout_marginLeft="@dimen/backBtnM" />
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="호실문 관리"
+            android:textSize="@dimen/dBarF"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_bold"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/dSecond"
+    app:layout_constraintTop_toBottomOf="@id/dFirst"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/dThird"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintVertical_weight="5"
+    android:background="@color/gray"
+        android:padding="@dimen/mContentP">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/msContent1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/content_background"
+            android:elevation="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_weight="8"
+            android:padding="@dimen/mContentP"
+            android:layout_margin="@dimen/mM">
+
+            <TextView
+                android:id="@+id/dText1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/dAllSw"
+                app:layout_constraintBottom_toTopOf="@id/dLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전체"
+                android:textSize="@dimen/mF"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_semibold"/>
+
+            <Switch
+                android:id="@+id/dAllSw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mTextMR2"
+                app:layout_constraintBottom_toTopOf="@id/dLine"
+                app:layout_constraintLeft_toRightOf="@+id/dText1"
+                app:layout_constraintRight_toLeftOf="@id/dLineV"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/dLineV"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/dAllSw"
+                app:layout_constraintRight_toLeftOf="@id/dText2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:id="@+id/dText2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/dLineV"
+                app:layout_constraintRight_toLeftOf="@id/d3Sw"
+                app:layout_constraintBottom_toTopOf="@id/dLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3층"
+                android:textSize="@dimen/mF"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_semibold"/>
+
+            <Switch
+                android:id="@+id/d3Sw"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/dText2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/dLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mTextMR2"/>
+
+            <View
+                android:id="@+id/dLine"
+                app:layout_constraintTop_toBottomOf="@+id/dText1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/dText3"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:id="@+id/dText3"
+                app:layout_constraintTop_toBottomOf="@id/dLine"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/d4Sw"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4층"
+                android:textSize="@dimen/mF"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_semibold"/>
+
+            <Switch
+                android:id="@+id/d4Sw"
+                app:layout_constraintTop_toBottomOf="@id/dLine"
+                app:layout_constraintLeft_toRightOf="@+id/dText3"
+                app:layout_constraintRight_toLeftOf="@id/dLineV"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mTextMR2"/>
+
+            <TextView
+                android:id="@+id/dText4"
+                app:layout_constraintTop_toBottomOf="@id/dLine"
+                app:layout_constraintLeft_toRightOf="@id/dLineV"
+                app:layout_constraintRight_toLeftOf="@id/d5Sw"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5층"
+                android:textSize="@dimen/mF"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_semibold"/>
+
+            <Switch
+                android:id="@+id/d5Sw"
+                app:layout_constraintTop_toBottomOf="@id/dLine"
+                app:layout_constraintLeft_toRightOf="@+id/dText2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mTextMR2"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dThird"
+        app:layout_constraintTop_toBottomOf="@id/dSecond"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="8">
+
+        <TextView
+            android:id="@+id/dText5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="호실별 문 관리"
+            android:textSize="@dimen/mF"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_semibold"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/dTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dText5">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="3층" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="4층" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="5층" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dConst"
+            app:layout_constraintTop_toBottomOf="@+id/dTabLayout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingLeft="@dimen/P"
+            android:paddingRight="@dimen/P">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/dViewPager"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

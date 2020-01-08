@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <ImageButton
+        android:id="@+id/mysbackBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="@dimen/imageBtnWH"
+        android:layout_height="@dimen/imageBtnWH"
+        android:background="@color/invisible"
+        android:src="@drawable/back"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="@dimen/backBtnM"
+        android:layout_marginLeft="@dimen/backBtnM" />
+
+    <ImageView
+        android:id="@+id/mysImage"
+        app:layout_constraintTop_toBottomOf="@id/mysbackBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="@dimen/myImage"
+        android:layout_height="@dimen/myImage"
+        android:src="@drawable/student"/>
+
+    <TextView
+        android:id="@+id/mysUser"
+        app:layout_constraintTop_toBottomOf="@id/mysImage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name"
+        android:textSize="@dimen/myUser"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginTop="@dimen/myUserMT"/>
+
+    <TextView
+        android:id="@+id/mysJob"
+        app:layout_constraintTop_toBottomOf="@id/mysUser"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student"
+        android:textSize="@dimen/myJob"
+        android:textColor="@color/navyGray"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mysUp"
+        app:layout_constraintTop_toBottomOf="@id/mysJob"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mysMd"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1">
+
+        <TextView
+            android:id="@+id/mysText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="현재 비밀번호"
+            android:textColor="@color/navyGray"
+            android:textSize="@dimen/myJob"
+            app:layout_constraintBottom_toTopOf="@+id/mysNowPwd"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/mysNowPwd"
+            app:layout_constraintTop_toBottomOf="@id/mysText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/iEditF"
+            android:hint="Room Number"
+            style="@style/MyPageEditStyle" />
+
+        <ImageButton
+            android:id="@+id/mysNowPwdDel"
+            app:layout_constraintTop_toTopOf="@id/mysNowPwd"
+            app:layout_constraintRight_toLeftOf="@id/mysNowPwdSee"
+            app:layout_constraintBottom_toBottomOf="@id/mysNowPwd"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:layout_marginRight="@dimen/deleteBtnMR"
+            android:src="@drawable/delete"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/mysNowPwdSee"
+            app:layout_constraintTop_toTopOf="@id/mysNowPwd"
+            app:layout_constraintRight_toRightOf="@id/mysNowPwd"
+            app:layout_constraintBottom_toBottomOf="@id/mysNowPwd"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:src="@drawable/eye_close" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mysMd"
+        app:layout_constraintTop_toBottomOf="@id/mysUp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mysDown"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1">
+
+        <TextView
+            android:id="@+id/mysText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="호실 변경"
+            android:textColor="@color/navyGray"
+            android:textSize="@dimen/myJob"
+            app:layout_constraintBottom_toTopOf="@+id/mysRoom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/mysRoom"
+            app:layout_constraintTop_toBottomOf="@id/mysText1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/iEditF"
+            android:hint="Room Number"
+            style="@style/MyPageEditStyle"
+            android:inputType="number"
+            android:maxLength="3" />
+
+        <ImageButton
+            android:id="@+id/mysRoomnumDel"
+            app:layout_constraintTop_toTopOf="@id/mysRoom"
+            app:layout_constraintRight_toRightOf="@id/mysRoom"
+            app:layout_constraintBottom_toBottomOf="@id/mysRoom"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:src="@drawable/delete"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mysDown"
+        app:layout_constraintTop_toBottomOf="@id/mysMd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mysContinueBtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="2">
+
+        <TextView
+            android:id="@+id/mysText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="비밀번호 재설정"
+            android:textColor="@color/navyGray"
+            android:textSize="@dimen/myJob"
+            app:layout_constraintBottom_toTopOf="@+id/mysPwd1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/mysPwd1"
+            app:layout_constraintTop_toBottomOf="@id/mysText2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/mysPwd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/iEditF"
+            android:hint="New Password"
+            style="@style/MyPageEditStyle" />
+
+        <ImageButton
+            android:id="@+id/mysPwd1Del"
+            app:layout_constraintTop_toTopOf="@+id/mysPwd1"
+            app:layout_constraintRight_toLeftOf="@id/mysPwd1See"
+            app:layout_constraintBottom_toBottomOf="@id/mysPwd1"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:layout_marginRight="@dimen/deleteBtnMR"
+            android:src="@drawable/delete"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/mysPwd1See"
+            app:layout_constraintTop_toTopOf="@id/mysPwd1"
+            app:layout_constraintRight_toRightOf="@id/mysPwd1"
+            app:layout_constraintBottom_toBottomOf="@id/mysPwd1"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:src="@drawable/eye_close" />
+
+        <EditText
+            android:id="@+id/mysPwd2"
+            app:layout_constraintTop_toBottomOf="@id/mysPwd1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/iEditF"
+            android:hint="Confirm New Password"
+            style="@style/MyPageEditStyle" />
+
+        <ImageButton
+            android:id="@+id/mysPwd2Del"
+            app:layout_constraintTop_toTopOf="@+id/mysPwd2"
+            app:layout_constraintRight_toLeftOf="@id/mysPwd2See"
+            app:layout_constraintBottom_toBottomOf="@id/mysPwd2"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:layout_marginRight="@dimen/deleteBtnMR"
+            android:src="@drawable/delete"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/mysPwd2See"
+            app:layout_constraintTop_toTopOf="@id/mysPwd2"
+            app:layout_constraintRight_toRightOf="@id/mysPwd2"
+            app:layout_constraintBottom_toBottomOf="@id/mysPwd2"
+            android:layout_width="@dimen/deleteBtnWH"
+            android:layout_height="@dimen/deleteBtnWH"
+            android:src="@drawable/eye_close" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/mysContinueBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btnH"
+        android:background="@drawable/button3_background"
+        android:text="CONTINUE"
+        android:textColor="@color/white"
+        style="@style/ContinueBtnStyle"
+        android:layout_marginBottom="@dimen/uBtnMB"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

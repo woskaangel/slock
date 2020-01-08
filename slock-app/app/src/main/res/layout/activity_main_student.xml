@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/msUp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/msDown"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/P"
+        android:paddingRight="@dimen/P">
+
+        <TextView
+            android:id="@+id/msUser"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/msHope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User,"
+            android:textSize="@dimen/mUserF"
+            android:textColor="@color/mainPink"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+        <TextView
+            android:id="@+id/msHope"
+            app:layout_constraintTop_toBottomOf="@id/msUser"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hope school was\nfun today!"
+            android:textSize="@dimen/mHopeF"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_bold"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/msAmu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/msImage"
+                android:layout_width="@dimen/mProfileI"
+                android:layout_height="@dimen/mProfileI"
+                android:src="@drawable/student"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/invisible"
+                android:scaleType="fitCenter"/>
+
+            <Button
+                android:id="@+id/msLogoutBtn"
+                app:layout_constraintTop_toBottomOf="@id/msImage"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="로그아웃"
+                android:textSize="@dimen/mLogoutF"
+                android:textColor="@color/navyGray"
+                android:fontFamily="@font/montserrat_semibold"
+                android:background="@color/invisible"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/msDown"
+        app:layout_constraintTop_toBottomOf="@+id/msUp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="4"
+        android:background="@color/gray"
+        android:padding="@dimen/mBigP">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/msDownUp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/msDownDown"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintVertical_weight="1"
+            android:padding="@dimen/mBigP">
+
+            <TextView
+                android:id="@+id/msText1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/msContent1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="실시간 현관문 요청 현황"
+                app:layout_constraintVertical_weight="1"
+                style="@style/ContentTitleStyle" />
+
+            <TextView
+                android:id="@+id/msText6"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/msOpenTime"
+                app:layout_constraintBottom_toTopOf="@+id/msContent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오픈 시간"
+                android:textSize="@dimen/mOpenF"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_marginRight="@dimen/mM" />
+
+            <TextView
+                android:id="@+id/msOpenTime"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/msContent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="미정"
+                android:textColor="@color/navyGray"
+                android:textSize="@dimen/mOpenF"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_marginRight="@dimen/MRL" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/msContent1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/content_background"
+                android:elevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/msText1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_weight="8"
+                android:layout_marginLeft="@dimen/mM"
+                android:layout_marginRight="@dimen/mM"
+                android:layout_marginBottom="@dimen/mM"
+                android:padding="@dimen/mContentP" >
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/msChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/msDownDown"
+            app:layout_constraintTop_toBottomOf="@id/msDownUp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintVertical_weight="1"
+            android:padding="@dimen/mBigP">
+
+            <TextView
+                android:id="@+id/msText2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/msContent2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="문 개방 요청"
+                app:layout_constraintVertical_weight="1"
+                style="@style/ContentTitleStyle" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/msContent2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/content_background"
+                android:elevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/msText2"
+                app:layout_constraintVertical_weight="8"
+                android:paddingLeft="@dimen/mContentP"
+                android:paddingRight="@dimen/mContentP"
+                android:layout_marginLeft="@dimen/mM"
+                android:layout_marginRight="@dimen/mM"
+                android:layout_marginBottom="@dimen/mM">
+
+                <TimePicker
+                    android:id="@+id/msTime"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/msRequBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/mTimeH"
+                    android:timePickerMode="spinner"/>
+
+                <Button
+                    android:id="@+id/msRequBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/msTime"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/msLine"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnH"
+                    android:background="@drawable/button3_background"
+                    android:textColor="@color/white"
+                    android:text="요청"
+                    android:textSize="@dimen/btnF"/>
+
+                <View
+                    android:id="@+id/msLine"
+                    app:layout_constraintTop_toBottomOf="@+id/msRequBtn"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/msText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/msText3"
+                    app:layout_constraintTop_toBottomOf="@+id/msLine"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/msMainDoorState"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="현관문 상태"
+                    android:textColor="@color/navyGray"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textSize="@dimen/mUserF"
+                    android:layout_marginRight="@dimen/mTextMR"
+                    app:layout_constraintHorizontal_chainStyle="packed"/>
+
+                <TextView
+                    android:id="@+id/msMainDoorState"
+                    app:layout_constraintTop_toBottomOf="@+id/msLine"
+                    app:layout_constraintLeft_toRightOf="@id/msText3"
+                    app:layout_constraintRight_toLeftOf="@+id/msText4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Open"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/mUserF"
+                    android:layout_marginRight="@dimen/mTextMR2"/>
+
+                <TextView
+                    android:id="@+id/msText4"
+                    app:layout_constraintTop_toBottomOf="@+id/msLine"
+                    app:layout_constraintLeft_toRightOf="@id/msMainDoorState"
+                    app:layout_constraintRight_toLeftOf="@+id/msDoorState"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="호실문 상태"
+                    android:textColor="@color/navyGray"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textSize="@dimen/mUserF"
+                    android:layout_marginRight="@dimen/mTextMR" />
+
+                <TextView
+                    android:id="@+id/msDoorState"
+                    app:layout_constraintTop_toBottomOf="@+id/msLine"
+                    app:layout_constraintLeft_toRightOf="@id/msText4"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Close"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/mUserF"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@+id/msDown"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:src="@drawable/radius"
+        android:rotation="180"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

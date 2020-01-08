@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btnW">120dp</dimen>
+    <dimen name="btnH">50dp</dimen>
+    <dimen name="btnF">17sp</dimen>
+    <dimen name="cornerI">60dp</dimen>
+    <dimen name="editF">18sp</dimen>
+    <dimen name="imageBtnWH">30dp</dimen>
+    <dimen name="deleteBtnMR">10dp</dimen>
+    <dimen name="deleteBtnWH">24dp</dimen>
+    <dimen name="backBtnM">15dp</dimen>
+    <dimen name="MRL">35dp</dimen>
+    <dimen name="P">30dp</dimen>
+    <dimen name="warningF">12sp</dimen>
+
+    <!-- start -->
+    <dimen name="sMeetF">14dp</dimen>
+    <dimen name="sWelcomeF">40sp</dimen>
+    <dimen name="sWelcomMB">15dp</dimen>
+    <dimen name="sBlablaF">18sp</dimen>
+
+    <!-- signin -->
+    <dimen name="iLogoW">40dp</dimen>
+    <dimen name="iEditF">19sp</dimen>
+    <dimen name="iCheckTLRB">5dp</dimen>
+    <dimen name="iCheckWH">24dp</dimen>
+    <dimen name="iCheckF">14sp</dimen>
+    <dimen name="iContinueB">0.9</dimen>
+    <dimen name="iSignBtnB">0.3</dimen>
+    <dimen name="iContentB">0.55</dimen>
+
+    <!-- signup -->
+    <dimen name="uBtnW">200dp</dimen>
+    <dimen name="uBtnP">50dp</dimen>
+    <dimen name="uBtnML">230dp</dimen>
+    <dimen name="uBtnMB">40dp</dimen>
+
+    <!-- Main -->
+    <dimen name="mUserF">16sp</dimen>
+    <dimen name="mHopeF">20sp</dimen>
+    <dimen name="mProfileI">60dp</dimen>
+    <dimen name="mLogoutF">12sp</dimen>
+    <dimen name="mBigP">5dp</dimen>
+    <dimen name="mF">16sp</dimen>
+    <dimen name="mM">15dp</dimen>
+    <dimen name="mTimeH">100dp</dimen>
+    <dimen name="mLineM">50dp</dimen>
+    <dimen name="mTextMR">5dp</dimen>
+    <dimen name="mTextMR2">15dp</dimen>
+    <dimen name="mContentP">20dp</dimen>
+    <dimen name="mOpenF">14sp</dimen>
+
+    <!-- MyPage -->
+    <dimen name="myImage">105dp</dimen>
+    <dimen name="myUser">30sp</dimen>
+    <dimen name="myUserMT">20dp</dimen>
+    <dimen name="myJob">18sp</dimen>
+    <dimen name="myMRL">40dp</dimen>
+    <dimen name="myContent">230dp</dimen>
+
+    <!-- Door -->
+    <dimen name="dBarF">25sp</dimen>
+
+    <!-- Log -->
+    <dimen name="lReM">30dp</dimen>
+    <dimen name="lH">80dp</dimen>
+    <dimen name="lImageWH">50dp</dimen>
+    <dimen name="lMRL">20dp</dimen>
+    <dimen name="lStateF">18sp</dimen>
+    <dimen name="lTimeF">16sp</dimen>
+
+    <!-- Frag -->
+    <dimen name="fH">50dp</dimen>
+
+    <!-- Toast -->
+    <dimen name="tF">16sp</dimen>
+    <dimen name="tP">10dp</dimen>
+    <dimen name="tMB">30dp</dimen>
+
+    <!-- Loading -->
+    <dimen name="loadingI">40dp</dimen>
+
+    <!-- Dialog -->
+    <dimen name="dContentW">300dp</dimen>
+    <dimen name="dContentH">130dp</dimen>
+    <dimen name="dContentP">35dp</dimen>
+    <dimen name="dButtonH">30dp</dimen>
+    <dimen name="dF">18sp</dimen>
+    <dimen name="dButtonF">16sp</dimen>
+
+</resources>

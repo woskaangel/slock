@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/room2"
+        android:scaleType="centerCrop"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/upUp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/upDown"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="0.9" >
+
+        <Button
+            android:id="@+id/upSigninBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/upSignupBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN IN"
+            android:textColor="@color/whiteOpacity"
+            style="@style/SignBtnStyle"
+            app:layout_constraintVertical_bias="@dimen/iSignBtnB" />
+
+        <Button
+            android:id="@+id/upSignupBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/upSigninBtn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            style="@style/SignBtnStyle"
+            app:layout_constraintVertical_bias="@dimen/iSignBtnB" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/upDown"
+        app:layout_constraintTop_toBottomOf="@id/upUp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"/>
+
+    <Button
+        android:id="@+id/upTeacherBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/upStudentBtn"
+        android:layout_width="@dimen/uBtnW"
+        android:layout_height="@dimen/btnH"
+        android:background="@drawable/button2_background"
+        android:text="TEACHER →"
+        android:textSize="@dimen/btnF"
+        android:textColor="@color/mainPurple"
+        android:textAlignment="textStart"
+        android:paddingLeft="@dimen/uBtnP"
+        android:layout_marginLeft="@dimen/uBtnML"
+        android:layout_marginBottom="@dimen/uBtnMB" />
+
+    <Button
+        android:id="@+id/upStudentBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="@dimen/uBtnW"
+        android:layout_height="@dimen/btnH"
+        android:background="@drawable/button_background"
+        android:text="STUDENT →"
+        android:textSize="@dimen/btnF"
+        android:textColor="@color/white"
+        android:textAlignment="textStart"
+        android:paddingLeft="@dimen/uBtnP"
+        android:layout_marginLeft="@dimen/uBtnML"
+        android:layout_marginBottom="@dimen/uBtnMB"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

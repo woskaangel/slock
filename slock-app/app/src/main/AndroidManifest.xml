@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.slock">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:targetSandboxVersion="1"
+        android:allowBackup="true"
+        android:icon="@drawable/slock_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/slock_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".StartActivity" />
+        <activity android:name=".SignInActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name=".SignUpActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".SignUpStudentActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name=".SignUpTeacherActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name=".MainTeacherActivity" />
+        <activity android:name=".MainStudentActivity" />
+        <activity android:name=".MyPageTeacherActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".MyPageStudentActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".DoorActivity" />
+        <activity android:name=".LogActivity" />
+        <activity android:name=".HardwareActivity" />
+    </application>
+
+</manifest>
