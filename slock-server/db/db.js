@@ -34,7 +34,7 @@ exports.IdDuplicate=function(input,callback){
 exports.DeleteStudent=function(){
     conn.query('delete from user where u_level=1',function(err){
         if(err) console.log(err);
-    });
+    }); 
 }
 exports.PwChange=function(input){
     conn.query('update user set u_pw=? where u_id=?;',input,function(err){
